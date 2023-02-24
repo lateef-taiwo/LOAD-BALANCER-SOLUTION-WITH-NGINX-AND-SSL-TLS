@@ -31,9 +31,7 @@ This project consists of two parts:
 
 * Configure Nginx LB using Web Servers’ names defined in /etc/hosts.
 
-Configure Nginx LB using Web Servers’ names defined in /etc/hosts
-Hint: Read this blog to read about /etc/host
-Open the default nginx configuration file
-sudo vi /etc/nginx/nginx.conf
+Configure Nginx LB using Web Servers’ names defined in /etc/hosts. Open the default nginx configuration file
+`sudo vi /etc/nginx/nginx.conf`
 
 
