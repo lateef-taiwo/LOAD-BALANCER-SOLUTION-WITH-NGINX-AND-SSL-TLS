@@ -34,4 +34,13 @@ This project consists of two parts:
 Configure Nginx LB using Web Servers’ names defined in /etc/hosts. Open the default nginx configuration file
 `sudo vi /etc/nginx/nginx.conf`
 
+  ![load balancer](./images/load%20balancer%20config.png))
+
+* Restart Nginx and make sure the service is up and running.
+
+      sudo systemctl restart nginx
+      sudo systemctl status nginx
+  ![status](./images/restart%20nginx.png)
+
+
 
