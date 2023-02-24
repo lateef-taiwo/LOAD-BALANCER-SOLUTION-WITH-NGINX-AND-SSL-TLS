@@ -4,11 +4,15 @@ In this project we will configure an Nginx Load Balancer solution and also ensur
   
  ![ec2](./images/Architecture.png)
 
+------------
+____________
 ### Task
 This project consists of two parts:
 1. Configure Nginx as a Load Balancer
 2. Register a new domain name and configure secured connection using SSL/TLS certificates
 
+-----------
+__________
 ## CONFIGURE NGINX AS A LOAD BALANCER
 * Create an EC2 VM based on Ubuntu Server 20.04 LTS and name it Nginx LB (do not forget to open TCP port 80 for HTTP connections, also open TCP port 443 – this port is used for secured HTTPS connections).
 
@@ -42,5 +46,7 @@ Configure Nginx LB using Web Servers’ names defined in /etc/hosts. Open the de
       sudo systemctl status nginx
   ![status](./images/restart%20nginx.png)
 
+-----------
+___________
 
 
