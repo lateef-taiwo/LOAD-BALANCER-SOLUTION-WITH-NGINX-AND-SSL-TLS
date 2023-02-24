@@ -57,3 +57,6 @@ In order to get a valid SSL certificate – you need to register a new domain na
 
 * Assign an Elastic IP to your Nginx LB server and associate your domain name with this Elastic IP. An Elastic IP is a static IP address that does not change when restart or stop/start your EC2 instance.
 
+* Update A record in your registrar to point to Nginx LB using Elastic IP address
+
+
