@@ -49,4 +49,11 @@ Configure Nginx LB using Web Servers’ names defined in /etc/hosts. Open the de
 -----------
 ___________
 
+## REGISTER A NEW DOMAIN NAME AND CONFIGURE SECURED CONNECTION USING SSL/TLS CERTIFICATES
+Make necessary configurations to allow connections to our Tooling Web Solution secured!
+In order to get a valid SSL certificate – you need to register a new domain name, you can do it using any Domain name registrar – a company that manages reservation of domain names. The most popular ones are: Godaddy.com, namecheap, WHogohost, Domain.com, Bluehost.com.
+
+* Register a new domain name with any registrar of your choice in any domain zone (e.g. .com, .net, .org, .edu, .info, .xyz or any other).
+
+* Assign an Elastic IP to your Nginx LB server and associate your domain name with this Elastic IP. An Elastic IP is a static IP address that does not change when restart or stop/start your EC2 instance.
 
