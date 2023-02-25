@@ -82,6 +82,22 @@ In order to get a valid SSL certificate – you need to register a new domain na
 * Configure Nginx to recognize your new domain name. Update your nginx.conf with server_name www.<your-domain-name.com> instead of server_name www.domain.com.
 
 * Install [certbot](https://certbot.eff.org/) and request for an SSL/TLS certificate. Before installing certbot, make sure snapd service is active and running.
+  `sudo systemctl status snapd`
+  * Install certbot
+
+      `sudo snap install --classic certbot`
+
+* Request your certificate (just follow the certbot instructions – you will need to choose which domain you want your certificate to be issued for, domain name will be looked up from nginx.conf file.
+
+      sudo ln -s /snap/bin/certbot /usr/bin/certbot
+      sudo certbot --nginx
+
+* Test secured access to your Web Solution by trying to reach https://<your-domain-name.com>
+You shall be able to access your website by using HTTPS protocol (that uses TCP port 443).
+
+* You can click on the padlock icon to see the details of the certificate issued for your website
+
+
 
 
 
