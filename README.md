@@ -59,13 +59,15 @@ In order to get a valid SSL certificate – you need to register a new domain na
 
   ![elastic ip](./images/elastic%20ip.png)
 
-* Update A record in your registrar to point to Nginx LB using Elastic IP address.
+* Update [A record](https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/) in your registrar to point to Nginx LB using Elastic IP address. Using Route53, perform the following:
 
-* Update A record in your registrar to point to Nginx LB using Elastic IP address.
-    
     * Create a hosted zone
     * Create records with paramters as shown below
     * In your domain name portal, Update the DNS with values gotten from route 53.
+
+    ![hosted zone](./images/hosted%20zone.png)
+
+    ![records](./images/Load%20balancer%20public%20ip.png)
 
 
 
