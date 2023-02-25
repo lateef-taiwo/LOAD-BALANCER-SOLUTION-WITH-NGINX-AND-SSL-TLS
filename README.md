@@ -79,13 +79,19 @@ In order to get a valid SSL certificate – you need to register a new domain na
 
 * Check that your Web Servers can be reached from your browser using new domain name using HTTP protocol – `http://<your-domain-name.com>`
 
+  ![savvytek](./images/savvytech%20online.png)
+
 * Configure Nginx to recognize your new domain name. Update your nginx.conf with server_name www.<your-domain-name.com> instead of server_name www.domain.com.
+
+  ![nginx config](./images/nginx%20config%20edit.png)
 
 * Install [certbot](https://certbot.eff.org/) and request for an SSL/TLS certificate. Before installing certbot, make sure snapd service is active and running.
   `sudo systemctl status snapd`
   * Install certbot
 
-      `sudo snap install --classic certbot`
+     `sudo snap install --classic certbot`
+
+     ![certbot](./images/certbot%20ssl.png)
 
 * Request your certificate (just follow the certbot instructions – you will need to choose which domain you want your certificate to be issued for, domain name will be looked up from nginx.conf file.
 
@@ -95,7 +101,40 @@ In order to get a valid SSL certificate – you need to register a new domain na
 * Test secured access to your Web Solution by trying to reach https://<your-domain-name.com>
 You shall be able to access your website by using HTTPS protocol (that uses TCP port 443).
 
-* You can click on the padlock icon to see the details of the certificate issued for your website
+  ![savvytek](./images/savvytek%20online%20https.png)
+
+* You can click on the padlock icon to see the details of the certificate issued for your website.
+
+* Set up periodical renewal of your SSL/TLS certificate. By default, LetsEncrypt certificate is valid for 90 days, so it is recommended to renew it at least every 60 days or more frequently.
+You can test renewal command in dry-run mode.
+`sudo certbot renew --dry-run`
+Best pracice is to have a scheduled job that wil run renew command periodically. Let us configure a cronjob to run the command twice a day.
+To do so, we edit the crontab file with the following command:
+
+    `crontab -e`
+
+  Add following line:
+
+  `* */12 * * *   root /usr/bin/certbot renew > /dev/null 2>&1`
+
+  ![cron](./images/crontab.png)
+  ![cron](./images/crontab%20config.png)
+
+
+* This schdeules the cronjob to run every 12 hours, that is twice everyday.
+
+* You can always change the interval of this cronjob if twice a day is too often by adjusting schedule expression.
+
+* You can log into your website using the username and password set in previious projects.
+
+  ![done](./images/logged%20in.png)
+
+----------
+### Congratulations!!! 
+You have just implemented an Nginx Load Balancing Web Solution with secured HTTPS connection with periodically updated SSL/TLS certificates.
+
+
+
 
 
 
