@@ -59,17 +59,29 @@ In order to get a valid SSL certificate – you need to register a new domain na
 
   ![elastic ip](./images/elastic%20ip.png)
 
-* Update [A record](https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/) in your registrar to point to Nginx LB using Elastic IP address. Using Route53, perform the following:
+* Update [A record](https://www.cloudflare.com/learning/dns/dns-records/dns-a-record/) in your registrar to point to Nginx LB using Elastic IP address. Using Route 53, perform the following:
 
     * Create a hosted zone
     * Create records with paramters as shown below
-    * In your domain name portal, Update the DNS with values gotten from route 53.
+   
 
     ![hosted zone](./images/hosted%20zone.png)
 
     ![records](./images/Load%20balancer%20public%20ip.png)
 
+    ![records](./images/records.png)
 
+    ![records](./images/record%20created%20successfully.png)
+
+* In your domain name portal, Update the DNS with values gotten from Route 53.
+
+  ![host](./images/custom%20dns.png)
+
+* Check that your Web Servers can be reached from your browser using new domain name using HTTP protocol – `http://<your-domain-name.com>`
+
+* Configure Nginx to recognize your new domain name. Update your nginx.conf with server_name www.<your-domain-name.com> instead of server_name www.domain.com.
+
+* Install [certbot](https://certbot.eff.org/) and request for an SSL/TLS certificate. Before installing certbot, make sure snapd service is active and running.
 
 
 
