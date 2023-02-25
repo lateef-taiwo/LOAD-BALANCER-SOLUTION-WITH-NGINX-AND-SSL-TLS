@@ -53,10 +53,21 @@ ___________
 Make necessary configurations to allow connections to our Tooling Web Solution secured!
 In order to get a valid SSL certificate – you need to register a new domain name, you can do it using any Domain name registrar – a company that manages reservation of domain names. The most popular ones are: Godaddy.com, namecheap, WHogohost, Domain.com, Bluehost.com.
 
-* Register a new domain name with any registrar of your choice in any domain zone (e.g. .com, .net, .org, .edu, .info, .xyz or any other).
+* Register a new domain name with any registrar of your choice in any domain zone (e.g. .com, .net, .org, .edu, .info, .online, .xyz or any other).
 
 * Assign an Elastic IP to your Nginx LB server and associate your domain name with this Elastic IP. An Elastic IP is a static IP address that does not change when restart or stop/start your EC2 instance.
 
-* Update A record in your registrar to point to Nginx LB using Elastic IP address
+  ![elastic ip](./images/elastic%20ip.png)
+
+* Update A record in your registrar to point to Nginx LB using Elastic IP address.
+
+* Update A record in your registrar to point to Nginx LB using Elastic IP address.
+    
+    * Create a hosted zone
+    * Create records with paramters as shown below
+    * In your domain name portal, Update the DNS with values gotten from route 53.
+
+
+
 
 
