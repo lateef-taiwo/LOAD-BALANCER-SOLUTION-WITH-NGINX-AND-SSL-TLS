@@ -125,7 +125,7 @@ To do so, we edit the crontab file with the following command:
 
 * You can always change the interval of this cronjob if twice a day is too often by adjusting schedule expression.
 
-* You can log into your website using the username and password set in previious projects.
+* You can log into your website using the username and password set in previous projects.
 
   ![done](./images/logged%20in.png)
 
