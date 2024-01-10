@@ -67,7 +67,7 @@ ___________
 
 ## REGISTER A NEW DOMAIN NAME AND CONFIGURE SECURED CONNECTION USING SSL/TLS CERTIFICATES
 Make necessary configurations to allow connections to our Tooling Web Solution secured!
-In order to get a valid SSL certificate – you need to register a new domain name, you can do it using any Domain name registrar – a company that manages reservation of domain names. The most popular ones are: Godaddy.com, namecheap, WHogohost, Domain.com, Bluehost.com.
+In order to get a valid SSL certificate – you need to register a new domain name, you can do it using any Domain name registrar – a company that manages reservation of domain names. The most popular ones are: [Godaddy.com](https://www.godaddy.com/en-uk/domains), namecheap, Whogohost, Domain.com, Bluehost.com.
 
 * Register a new domain name with any registrar of your choice in any domain zone (e.g. .com, .net, .org, .edu, .info, .online, .xyz or any other).
 
