@@ -60,6 +60,8 @@ Configure Nginx LB using Web Servers’ names defined in /etc/hosts. Open the de
       sudo systemctl status nginx
   ![status](./images/restart%20nginx.png)
 
+## Side Self Study: Read more about HTTP load balancing methods and features supported by Nginx on this ![page](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
+
 -----------
 ___________
 
