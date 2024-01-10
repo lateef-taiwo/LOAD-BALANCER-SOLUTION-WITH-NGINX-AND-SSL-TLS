@@ -38,6 +38,22 @@ __________
 Configure Nginx LB using Web Servers’ names defined in /etc/hosts. Open the default nginx configuration file
 `sudo vi /etc/nginx/nginx.conf`
 
+    http {
+     upstream myproject {
+      server Web1 weight=5;
+      server Web2 weight=5;
+    }
+  
+    server {
+        listen 80;
+        server_name www.domain.com;
+        location / {
+          proxy_pass http://myproject;
+        }
+      }
+
+     }
+
   ![load balancer](./images/load%20balancer%20config.png))
 
 * Restart Nginx and make sure the service is up and running.
